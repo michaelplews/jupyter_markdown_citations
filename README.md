@@ -1,4 +1,4 @@
-# jupyter-markdown-citations: Formatted Reference Links for Jupyter Notebooks
+# Formatted Reference Links for Jupyter Notebooks based on .bib Files
 
 Markdown cell:
 ```html
@@ -6,13 +6,13 @@ Nanocrystals, such as those produced by <cite>Zhang2012</cite> posses interestin
 ```
 
 Output:
-```html
-Nanocrystals, such as those produced by <a title="Tuning sub-10 nm single-phase NaMnF3 nanocrystals as ultrasensitive hosts for pure intense fluorescence and excellent T1 magnetic resonance imaging, Chem. Commun. (Camb)., vol. 48, pg. 10322--4, Oct. 2012" href="http://dx.doi.org/10.1039/c2cc34858f">Zhang et. al., 2012</a> posses interesting interfacial chemistry. 
-```
+
+> Nanocrystals, such as those produced by <a title="Tuning sub-10 nm single-phase NaMnF3 nanocrystals as ultrasensitive hosts for pure intense fluorescence and excellent T1 magnetic resonance imaging, Chem. Commun. (Camb)., vol. 48, pg. 10322--4, Oct. 2012" href="http://dx.doi.org/10.1039/c2cc34858f">Zhang et. al., 2012</a> posses interesting interfacial chemistry. 
+
 
 ## Installation
 
-This requires the !(bibtex-parser)[https://github.com/mikolalysenko/bibtex-parser] package also.
+This requires the [bibtex-parser](https://github.com/mikolalysenko/bibtex-parser) package also.
 
 ```bash
 mkdir ~/.jupyter/custom
