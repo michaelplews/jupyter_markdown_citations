@@ -1,5 +1,5 @@
 require(['custom/bibtex-parser/parse-bibtex']);
-require(['custom/markdown-citations/custom_bibliography']);
+require(['custom/jupyter_markdown_citations/custom_bibliography']);
 
 function searchCite(){
 	json = doParse(bibliography)
@@ -22,5 +22,5 @@ function searchCite(){
 	};
 }
 
-setTimeout(function(){searchCite();},100);
+//setTimeout(function(){searchCite();},2000);
 setInterval(function(){searchCite();},2000);

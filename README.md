@@ -1,4 +1,4 @@
-# jupyter-markdown-citations: Formatted Reference Links for Jupyter Notebooks
+# jupyter-markdown-citations: Formatted Reference Links for Jupyter Notebooks using .bib files
 
 Markdown cell:
 ```html
