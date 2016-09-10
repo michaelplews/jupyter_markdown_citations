@@ -1,7 +1,7 @@
 # Formatted Reference Links for Jupyter Notebooks based on .bib Files
 
 ## Example
-![Example.gif](./example/example.gif)
+![Example.gif](./example/example_zhang.gif)
 
 Output gives `<a href=http://dx.doi.org/...></a>` link to the original paper with title text full citation: 
 
