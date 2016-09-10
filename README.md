@@ -1,14 +1,13 @@
 # Formatted Reference Links for Jupyter Notebooks based on .bib Files
 
-Markdown cell:
-```html
-Nanocrystals, such as those produced by <cite>Zhang2012</cite> posses interesting interfacial chemistry. 
-```
+## Example
+![Example.gif](./example/example.gif)
 
-Output:
+Output gives `<a href=http://dx.doi.org/...></a>` link to the original paper with title text full citation: 
 
 > Nanocrystals, such as those produced by <a title="Tuning sub-10 nm single-phase NaMnF3 nanocrystals as ultrasensitive hosts for pure intense fluorescence and excellent T1 magnetic resonance imaging, Chem. Commun. (Camb)., vol. 48, pg. 10322--4, Oct. 2012" href="http://dx.doi.org/10.1039/c2cc34858f">Zhang et. al., 2012</a> posses interesting interfacial chemistry. 
 
+This exact reference used in custom_bibliography.js can be found [here](./example/example_custom_bibliography.js).
 
 ## Installation
 
