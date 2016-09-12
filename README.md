@@ -13,19 +13,32 @@ This exact reference used in custom_bibliography.js can be found [here](./exampl
 
 This requires the [bibtex-parser](https://github.com/mikolalysenko/bibtex-parser) package also.
 
+First, download the dependencies and package to the ~/.jupyter/custom location
 ```bash
 mkdir ~/.jupyter/custom
 cd ~/.jupyter/custom
 git clone git@github.com:mikolalysenko/bibtex-parser.git
-git clone git@github.com:michaelplews/jupyter-markdown-citations.git
-touch ./jupyter-markdown-citations/custom_bibliography.js
-echo 'var bibliography = ""' >> ./jupyter-markdown-citations/custom_bibliography.js
+git clone git@github.com:michaelplews/jupyter_markdown_citations.git
+cd jupyter_markdown_citations
 ```
 
- - Creates the custom jupyter installs directory
- - Installs dependencies
- - Installs this package
- - Creates the custom_bibliography.js file
- - Adds the bibliography variable to the file
+Next, symlink (or copy) your .bib file (mine is exported from [Mendeley](https://www.mendeley.com)) to the same folder:
+```bash
+ln -s /directory/to/bib_file.bib #for symlinking
+cp /directory/to/bib_file.bib . #for copying
+#only use one of the above options
+```
 
-This repo is currently under development
+Generate the custom_bibliography.js file with the make_bib_js.py file:
+```bash
+python make_bib_js.py bib_file.bib
+```
+Lastly, add this app to your custom.js file:
+```bash
+cd ~/.jupyter/custom
+echo "require(['custom/jupyter_markdown_citations/citations']);" >> custom.js
+```
+
+Reloading your .iPyNb page in the browser should now load this package.
+
+Enjoy!
