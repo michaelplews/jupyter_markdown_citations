@@ -1,8 +1,15 @@
 require(['custom/bibtex-parser/parse-bibtex']);
 require(['custom/jupyter_markdown_citations/custom_bibliography']);
 
+appName = 'jupyter_markdown_citations'
+
+function parseBib(){
+	json = doParse(bibliography);
+	console.log(appName + ': ', 'bibliography json-ified');
+	return json
+}
+
 function searchCite(){
-	json = doParse(bibliography)
 	var citations = document.getElementsByTagName("cite")
 	for(var i = 0; i < citations.length; i++){
 		citRef = citations[i].innerHTML.toUpperCase();
@@ -19,8 +26,9 @@ function searchCite(){
 			+ json[citRef].MONTH.charAt(0).toUpperCase()	//Capitalize first letter
 			+ json[citRef].MONTH.slice(1) + '. ' 			//Add remainder of string
 			+ json[citRef].YEAR);
+		console.log(appName + ': ', citRef + ' referenced');
 	};
 }
 
-//setTimeout(function(){searchCite();},2000);
+setTimeout(function(){parseBib();},500);
 setInterval(function(){searchCite();},2000);
