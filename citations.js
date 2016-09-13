@@ -11,6 +11,10 @@ function parseBib(){
 
 function searchCite(){
 	var citations = document.getElementsByTagName("cite")
+	//If seachCite() called before parseBib(), do parseBib()	
+	if (json == null){
+		parseBib()
+	} 
 	for(var i = 0; i < citations.length; i++){
 		citRef = citations[i].innerHTML.toUpperCase();
 		citation=citations[i];
@@ -30,5 +34,6 @@ function searchCite(){
 	};
 }
 
-setTimeout(function(){parseBib();},500);
+setTimeout(function(){parseBib();},5000); //First json will be undefined unless this has a long timeout (bib files are big)
+setTimeout(function(){searchCite();},5500); 
 setInterval(function(){searchCite();},2000);
